@@ -1,4 +1,4 @@
-# ElectroVote
+# [ElectroVote](https://electrovote.netlify.app/)
 ## A simple online voting system
 ### Things that this app does:
 - An admin can create a poll
