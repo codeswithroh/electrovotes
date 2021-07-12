@@ -50,7 +50,7 @@ export default function CreatePoll() {
     }
 
     const createPoll = async () => {
-        const response = await fetch(`http://localhost:4000/polls`, {
+        const response = await fetch(`https://electrovoteapp.herokuapp.com/polls`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

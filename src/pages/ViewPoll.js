@@ -12,7 +12,7 @@ export default function ViewPoll({ match }) {
   useEffect(() => {
     const fetchPoll = async () => {
       const response = await fetch(
-        `http://localhost:4000/polls/${match.params.poll}`
+        `https://electrovoteapp.herokuapp.com/polls/${match.params.poll}`
       );
 
       const data = await response.json();
@@ -34,7 +34,7 @@ export default function ViewPoll({ match }) {
   }, []);
 
   const vote = async (choice) => {
-    await fetch(`http://localhost:4000/polls/${match.params.poll}`, {
+    await fetch(`https://electrovoteapp.herokuapp.com/polls/${match.params.poll}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
