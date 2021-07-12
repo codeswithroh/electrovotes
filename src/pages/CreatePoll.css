@@ -1,0 +1,110 @@
+.create-poll {
+    position: absolute;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    top: 6em;
+}
+
+.create-poll-container {
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    -moz-backdrop-filter: blur(18px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.poll-title-input,
+.poll-answers-input {
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-family: 'Poppins', sans-serif;
+}
+
+.create-poll-header {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em 1em;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #324EB1;
+}
+.success-poll-header {
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5em 1em;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d9651;
+}
+.success-text {
+    font-family: 'Poppins', sans-serif;
+    font-size:1.2rem;    
+}
+.poll-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #324EB1;
+}
+
+.poll-answers {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #324EB1;
+}
+.poll-remove-button {
+    background: rgba(255, 68, 0);
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 0px 10px 0px rgba(255, 68, 0);
+    border-radius: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+.poll-remove-button:hover {
+    background: white;
+    box-shadow: 0px 0px 10px 0px white;
+    color: rgba(255, 68, 0);
+}
+.poll-create-button {
+    background: #324EB1;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 0px 10px 0px #324EB1;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    transition: 0.5s;
+}
+.poll-add-button {
+    background: #324EB1;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 0px 10px 0px #324EB1;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+
+.poll-create-button:hover,
+.poll-add-button:hover {
+    background: white;
+    box-shadow: 0px 0px 10px 0px white;
+    color: #324EB1;
+}
+@media screen and (max-width:400px) {
+    .create-poll-container {
+        background: rgba(255, 255, 255, 0.65);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        -moz-backdrop-filter: blur(18px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        margin:0 1em;
+    }
+}

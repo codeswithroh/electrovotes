@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Poppins:wght@300;400;700&display=swap');
+/*     font-family: 'Dancing Script', cursive;
+
+    font-family: 'Poppins', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background:#324EB1;
+    color:white;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background:white;
+}
+
+.main-page {
+    position: relative;
+}
+
+.decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 4em;
+    bottom: 0;
+    background: linear-gradient(95.3deg, #8399FF 13.21%, rgba(196, 196, 196, 0) 100%);
+}
+
+.vote-img {
+    position: absolute;
+    width: 625px;
+    height: 590px;
+    bottom: -1em;
+    right: 0;
+    background-image: url('./assets/vote.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+}
+
+.header {
+    background: linear-gradient(90deg, #8399FF 13.21%, rgba(196, 196, 196, 0) 100%);
+    border-bottom: 2px solid white;
+}
+
+.header-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+}
+@media screen and (max-width:400px) {
+    .vote-img {
+        position: absolute;
+        width: 425px;
+        height: 490px;
+        bottom: -1em;
+        right: 0;
+        top:2em;
+        background-image: url('./assets/vote.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        mix-blend-mode: multiply;
+    }   
+}

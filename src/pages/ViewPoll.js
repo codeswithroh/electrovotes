@@ -1,6 +1,8 @@
 // imp: ${process.env.REACT_APP_API_URL}
 // imp: http://localhost:4000
 import React, { useEffect, useState } from "react";
+import './ViewPoll.css';
+import '../index.css';
 
 import Button from "../components/Button";
 
@@ -69,17 +71,17 @@ export default function ViewPoll({ match }) {
   };
 
   return (
-    <div className='container mx-auto mt-16 px-5'>
-      <h1 className='my-5 text-3xl text-center'>
+    <div className='view-poll container mx-auto mt-16 px-5'>
+      <h1 className='view-poll-heading my-5 text-3xl text-center'>
         Welcome to ElectroVote
       </h1>
 
       {poll ? (
-        <div className='w-full max-w-3xl mx-auto bg-white shadow'>
+        <div className='view-poll-container w-full max-w-3xl mx-auto bg-white shadow'>
           <header className='px-5 py-4 flex justify-between items-center'>
-            {poll.title}
+            <h2 className="view-poll-title">{poll.title}</h2>
 
-            {voted && <span>{getTotalVotes()} votes</span>}
+            {voted && <span style={{fontSize:'1.2rem'}}>{getTotalVotes()} votes</span>}
 
             <Button onClick={() => setVoted(true)}>View results</Button>
           </header>
@@ -87,18 +89,18 @@ export default function ViewPoll({ match }) {
           {poll.choices.map((choice) => {
             return (
               <div
-                className='px-5 py-4 border-t border-gray-400 flex justify-between items-center'
+                className='px-5 py-4 border-t border-white-400 flex justify-between items-center'
                 key={choice._id}
               >
-                {choice.name}
+                <h3 className="view-poll-answers">{choice.name}</h3>
 
                 {voted ? (
-                  <span className='text-blue-500'>
+                  <span className='percent text-blue-500'>
                     {" "}
                     {getChoicePercentage(choice)}%{" "}
                   </span>
                 ) : (
-                  <Button onClick={() => vote(choice._id)}>Vote</Button>
+                  <Button className="view-poll-button" onClick={() => vote(choice._id)}>Vote</Button>
                 )}
               </div>
             );
