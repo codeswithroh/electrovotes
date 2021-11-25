@@ -1,0 +1,41 @@
+@mixin mobile-screen {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin flexBox($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+@mixin flexBox-mobile($gap) {
+  gap: $gap;
+}
+
+@mixin contentCenter {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+@mixin button($font-size, $padding-y, $padding-x) {
+  background: #e2b714;
+  font-size: $font-size;
+  border-radius: 10px;
+  padding: $padding-y $padding-x;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.5s;
+  color: #323437;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@mixin button-hover($background) {
+  background: $background;
+  color: #e2b714;
+  box-shadow: 0px 0px 7px #e2b714;
+}

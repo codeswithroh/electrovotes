@@ -1,0 +1,55 @@
+@import "./utils/mixins";
+@import "./utils/colors";
+@import "./utils/fontsize";
+
+.homepage {
+  @include contentCenter;
+  text-align: center;
+  background: $primary-background-color;
+  color: $primary-text-color;
+
+  &__body {
+    &--button {
+      margin-top: 3em;
+      @include flexBox(space-evenly, center);
+      @include mobile-screen {
+        @include flexBox-mobile(2em);
+      }
+    }
+  }
+
+  &-heading {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: $font-size-title;
+  }
+
+  &-subheading {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: $font-size-sub-title;
+    color: $secondary-text-color;
+  }
+
+  &-description {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: $font-size-description;
+    color: $secondary-text-color;
+    max-width: 25em;
+    margin: 1em 0 2em 0;
+  }
+
+  &-button {
+    @include button(1.8rem, 0.5em, 1em);
+  }
+  &-button:hover {
+    @include button-hover(#323437);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .homepage-description {
+    max-width: 15em;
+  }
+}

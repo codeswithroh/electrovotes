@@ -1,0 +1,11 @@
+.ResultChart {
+  position: absolute;
+  inset: 0 0 0 0;
+  z-index: 10;
+  margin-top: 5em;
+}
+
+.ResultChart__data {
+  font-size: 2em;
+  font-weight: bold;
+}

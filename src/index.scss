@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #324eb1;
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+  background: #323437;
+}
+
+.header {
+  background: #e2b714;
+
+  &-text {
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+    color: #323437;
+  }
+
+  &-text:hover {
+    color: #323437;
+  }
+}

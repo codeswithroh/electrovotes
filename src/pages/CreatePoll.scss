@@ -1,0 +1,93 @@
+@import "./utils/colors";
+@import "./utils/mixins";
+@import "./utils/fontsize";
+@import "./utils/paddings";
+
+.create-poll {
+  @include contentCenter;
+  background: $primary-background-color;
+
+  &-container {
+    background: $container-background-color;
+    box-shadow: 0 0px 10px 0 rgba(119, 120, 122, 0.37);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: 2em 0;
+  }
+}
+
+.poll-title-input,
+.poll-answers-input {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: "Poppins", sans-serif;
+}
+
+.create-poll-header,
+.success-poll-header {
+  font-family: "Poppins", sans-serif;
+  padding: $padding-standard;
+  font-size: $font-size-standard;
+  font-weight: 700;
+}
+
+.create-poll-header {
+  color: $primary-text-color-bright;
+}
+
+.success-poll-header {
+  color: #0d9651;
+}
+
+.success-text {
+  font-family: "Poppins", sans-serif;
+  font-size: $font-size-sub-title;
+}
+
+.poll-title,
+.poll-answers {
+  font-family: "Poppins", sans-serif;
+  font-size: $font-size-description;
+  color: $primary-text-color-bright;
+}
+
+.poll-remove-button {
+  background: rgb(255, 68, 0);
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 0px 10px 0px rgb(255, 68, 0);
+  border-radius: 10px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  transition: 0.5s;
+}
+
+.poll-remove-button:hover {
+  background: white;
+  box-shadow: 0px 0px 10px 0px white;
+  color: rgb(255, 68, 0);
+}
+
+.poll-create-button {
+  @include button(1.5rem, 0.5em, 1em);
+}
+
+.poll-add-button {
+  @include button(1.2rem, 0.3em, 0.6em);
+}
+
+.poll-create-button:hover,
+.poll-add-button:hover {
+  background: white;
+  box-shadow: 0px 0px 10px 0px white;
+  color: #324eb1;
+}
+@media screen and (max-width: 400px) {
+  .create-poll-container {
+    margin: 2em 0;
+    border-radius: 0;
+  }
+}
